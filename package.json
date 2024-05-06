@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/CodyCMcCarter/Blog-Site/issues"
   },
-  "homepage": "https://github.com/CodyCMcCarter/Blog-Site#readme"
+  "homepage": "https://github.com/CodyCMcCarter/Blog-Site#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
 }
