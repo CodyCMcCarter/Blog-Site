@@ -1,0 +1,19 @@
+{
+  "name": "blogsiteproject",
+  "version": "1.0.0",
+  "description": "DB-less Blog Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodyCMcCarter/Blog-Site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodyCMcCarter/Blog-Site/issues"
+  },
+  "homepage": "https://github.com/CodyCMcCarter/Blog-Site#readme"
+}
