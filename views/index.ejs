@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<div class="posts">
+    <!--All the existing posts will be listed here-->
+    <% if(locals.posts) { %>
+        <% posts.forEach(post => { %>
+            <div class="post-container">
+                <h2 class="title"><%=post.title%></h2>
+                <p class="content"><%=post.content%></p>
+                <p>Tags: <span class="tags"><%=post.tags.join(' ')%></span></p>
+            </div>
+        <% }); %>
+    <%}%>
+</div>
+
+<%- include("partials/footer.ejs") %>
