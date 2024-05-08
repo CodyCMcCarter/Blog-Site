@@ -3,12 +3,14 @@
 <div class="posts">
     <!--All the existing posts will be listed here-->
     <% if(locals.posts) { %>
-        <% posts.forEach(post => { %>
+        <% posts.forEach((post, index) => { %>
             <div class="post-container">
                 <h2 class="title"><%=post.title%></h2>
                 <p class="content"><%=post.content%></p>
                 <p>Tags: <span class="tags"><%=post.tags.join(' ')%></span></p>
             </div>
+            <a href="/editPost/<%=index%>" class="edit-button" id="edit-<%=index%>">Edit</a>
+            <a href="/delete/<%=index%>" class="delete-button" id="delete-<%=index%>">Delete</a>
         <% }); %>
     <%}%>
 </div>
