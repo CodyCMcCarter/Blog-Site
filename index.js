@@ -1,7 +1,10 @@
 import express from "express";
+import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 class Post {
     constructor(title, content, tags){
@@ -27,12 +30,27 @@ app.get("/createPost", (req, res) => {
     res.render("createPost.ejs");
 });
 
-app.get("/modifyPosts", (req, res) => {
-    res.render("modifyPosts.ejs");
+app.get("/editPost/:id", (req, res) => {
+    res.render("editPost.ejs", { editPost: posts[req.params.id], index: req.params.id });
 });
 
-app.post("/Submit", (req, res) => {
-    res.render("index.ejs");
+app.post("/submit", (req, res) => {
+    let newTags = req.body.tags.split(" ");
+    let newPost = new Post(req.body.title, req.body.content, newTags);
+    posts.unshift(newPost);
+    res.redirect("/");
+});
+
+app.post("/update/:id", (req, res) => {
+    let editTags = req.body.tags.split(" ");
+    let editPost = new Post(req.body.title, req.body.content, editTags);
+    posts[req.params.id] = editPost;
+    res.redirect("/");
+});
+
+app.get("/delete/:id", (req, res) => {
+    posts.splice(req.params.id, 1);
+    res.redirect("/");
 });
 
 app.listen(port, () => {
