@@ -5,6 +5,7 @@ const app = express();
 const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 class Post {
     constructor(title, content, tags){
@@ -19,8 +20,6 @@ const existingPost = new Post("Welcome To My Blog",
 ["first", "welcome", "short", "database", "blog"])
 
 var posts = [existingPost];
-
-app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     res.render("index.ejs", { posts: posts });
