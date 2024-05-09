@@ -1,0 +1,147 @@
+body {
+    background-color: #FFFFFF;
+    color: #FF971D;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    margin-bottom: 0;
+}
+
+header > a > h2 {
+    width: 100%;
+}
+
+a {
+    color: #FF971D;
+    text-decoration: none;
+}
+
+.nav-button {
+    padding: 10px 10px 10px 10px;
+    margin-top: 20px;
+    background-color: #F9F6F7;
+    border-radius: 10px;
+}
+
+.nav-button > a {
+    display: block;
+    padding: 8px 16px;
+}
+
+.navbar {
+    display: flex;
+    margin-top: 0;
+    list-style: none;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+.nav-button {
+    margin-left: 10px;
+}
+
+.header {
+    padding: 3rem 2rem;
+}
+
+.post {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1.5rem 3rem 1.5rem;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #F9F6F7;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+.post-container > * {
+    margin-left: 10px;
+}
+
+.content {
+    font-family: "Roboto Serif", serif;
+    white-space: pre-wrap; 
+}
+
+.post-buttons {
+    margin-bottom: 20px;
+    margin-left: 43%;
+    margin-top: auto;
+}
+
+.post-button {
+    padding: 10px 10px 10px 10px;
+    margin-top: 20px;
+    background-color: #FFE8D6;
+    border-radius: 10px;
+}
+
+.post-form {
+    background-color: #F9F6F7;
+    padding: 10px;
+    border-radius: 5%;
+    margin-left: 40px;
+}
+
+input {
+    display: block;
+    width: 500px;
+}
+
+textarea {
+    display: block;
+    width: 500px;
+    height: 200px;
+    font-family: "Roboto Serif", serif;
+}
+
+.submit-button {
+    width: 70px;
+    height: 30px;
+    background-color: #FFE8D6;
+    border: none;
+    border-radius: 10%;
+    color: #FF971D;
+    font-family: "Roboto", sans-serif;
+}
+
+footer {
+    padding: 2rem 3rem;
+}
+
+footer .navbar {
+    border-bottom: 1px solid #FEA82F;
+
+}
+
+.centered {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    a {
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+
+    .navbar {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 1760px) and (min-width: 1000px) {
+    .card-container {
+        width: 1000px;
+    }
+}
