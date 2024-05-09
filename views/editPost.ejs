@@ -1,17 +1,17 @@
 <%- include("partials/header.ejs") %>
 
 <% if(locals.editPost && locals.index) { %>
-    <form action="/update/<%= index %>" method="POST">
+    <form class="post-form" action="/update/<%= index %>" method="POST">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" value="<%= editPost.title %>"><br><br>
         <label for="content">Content:</label>
-        <textarea id="content" name="content" rows="7" cols="70"><%= editPost.content %></textarea><br><br>
+        <textarea id="content" name="content"><%= editPost.content %></textarea><br><br>
         <label for="tags">Tags (seperate by space):</label>
         <input type="text" id="tags" name="tags" value="<%= editPost.tags.join(' ') %>"><br><br>
-        <input type="submit" value="Update">
+        <input class="submit-button" type="submit" value="Update">
     </form>
 <%} else {%>
-    <h2>Post was not found and cannot be edited. Please return <a href="/">home</a>.</h2>
+    <h2>Post was not found. Please return <a href="/">home</a>.</h2>
 <%}%>
 
 <%- include("partials/footer.ejs") %>

@@ -8,9 +8,11 @@
                 <h2 class="title"><%=post.title%></h2>
                 <p class="content"><%=post.content%></p>
                 <p>Tags: <span class="tags"><%=post.tags.join(' ')%></span></p>
+                <div class="post-buttons">
+                    <a href="/editPost/<%=index%>" class="post-button edit-button" id="edit-<%=index%>">Edit</a>
+                    <a href="/delete/<%=index%>" class="post-button delete-button" id="delete-<%=index%>">Delete</a>
+                </div>
             </div>
-            <a href="/editPost/<%=index%>" class="edit-button" id="edit-<%=index%>">Edit</a>
-            <a href="/delete/<%=index%>" class="delete-button" id="delete-<%=index%>">Delete</a>
         <% }); %>
     <%}%>
 </div>
